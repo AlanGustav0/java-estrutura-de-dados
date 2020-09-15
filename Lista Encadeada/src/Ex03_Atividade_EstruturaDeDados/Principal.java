@@ -71,6 +71,15 @@ public class Principal {
 				}
 
 				break;
+				
+			case 6:
+				ra = Integer.parseInt(JOptionPane.showInputDialog("Insira o RA do aluno:"));
+				nome = JOptionPane.showInputDialog("Insira o nome do aluno: ");
+				turma = JOptionPane.showInputDialog("Insira a turma do aluno: ");
+				semestre = JOptionPane.showInputDialog("Insira o semestre: ");
+				lista.adcionaMeio(ra, nome, turma, semestre);
+				break;
+
 
 			case 7:
 				if (lista.listaVazia()) {

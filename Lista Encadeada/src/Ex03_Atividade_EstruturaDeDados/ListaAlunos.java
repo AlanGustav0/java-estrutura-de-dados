@@ -133,47 +133,97 @@ public class ListaAlunos {
 		return aluno;
 	}
 
+	public void adcionaMeio(int ra, String nome, String turma, String semestre) {
+
+		Aluno novo = new Aluno(ra, nome, turma, semestre);
+		Aluno auxiliar = inicio;
+		int tamanho = 0;
+		int meio = 0;
+		int inicia = 0;
+
+		if (inicio == null) {
+			inicio = novo;
+		} else {
+			if (inicio.getProximo() == null) {
+				inicio.setProximo(novo);;
+
+			}else {
+				
+				Aluno auxiliarBackup = inicio;
+				Aluno auxiliarAluno = inicio;
+				
+				while (auxiliarBackup != null) {
+					auxiliarBackup = auxiliarBackup.getProximo();
+					tamanho++;
+				}
+				
+				meio = tamanho / 2;
+				
+				while (inicia < meio - 1) {
+					auxiliarAluno = auxiliar;
+					auxiliar = auxiliar.getProximo();
+					inicia++;
+				}
+
+
+				if (inicia == meio - 1) {
+					novo.setProximo(auxiliar.getProximo());
+					auxiliar.setProximo(novo);
+				} 
+				
+			}
+			
+
+		}
+		
+	}
+
 	public String removeMeio() {
 
-		//Aqui declaramos as variáveis que iremos utilizar
+		// Aqui declaramos as variáveis que iremos utilizar
 		Aluno auxiliar = inicio;
 		String aluno = null;
 		int tamanho = 1;
 		int inicia = 0;
 		int meio = 0;
 
-		//Verificamos se a lista está vazia
+		// Verificamos se a lista está vazia
 		if (inicio == null) {
 			return aluno;
 		} else {
 
-			//Verificamos se o próximo elemento após o início está vazio
+			// Verificamos se o próximo elemento após o início está vazio
 			if (inicio.getProximo() == null) {
 				aluno = inicio.getNome();
 				inicio = null;
 
 			} else {
 
-				/*Caso contrário, criamos 2 variáveis auziliares
+				/*
+				 * Caso contrário, criamos 2 variáveis auziliares
 				 * 
-				 * auxiliarBackup - usamos para percorrer a lista e fazer o incremento da variável contador, com isso temos o tamanho da lista
+				 * auxiliarBackup - usamos para percorrer a lista e fazer o incremento da
+				 * variável contador, com isso temos o tamanho da lista
 				 * 
 				 * auxiliarAluno - usaremos para percorre a lista desde o início até a metade
 				 */
 				Aluno auxiliarBackup = inicio;
 				Aluno auxiliarAluno = inicio;
 
-				//Percorrendo a lista inteira
+				// Percorrendo a lista inteira
 				while (auxiliarBackup != null) {
 					auxiliarBackup = auxiliarBackup.getProximo();
 					tamanho++;
 				}
 
-				//Para encontrar o meio da lista, recebemos na variável meio o valor do tamanho da lista divido por 2
+				// Para encontrar o meio da lista, recebemos na variável meio o valor do tamanho
+				// da lista divido por 2
 				meio = tamanho / 2;
 
-				/*A veriável "inicia" foi criada para marcar o incio da lista, iremos percorrer a lista até chegar no valor do meio - 1
-				 * Afinal, quando chegarmos neste valor, iremos remover o valor após ele, ou seja, o valor do meio.
+				/*
+				 * A veriável "inicia" foi criada para marcar o incio da lista, iremos percorrer
+				 * a lista até chegar no valor do meio - 1 Afinal, quando chegarmos neste valor,
+				 * iremos remover o valor após ele, ou seja, o valor do meio.
 				 * 
 				 * A variável auciliarAluno está sendo utilizada para guardar um valor do meio.
 				 */
@@ -183,10 +233,12 @@ public class ListaAlunos {
 					inicia++;
 				}
 
-				/*Caso ambos valores sejam iguais, aluno receberá o nome do próximo aluno (aluno do meio) e a variável auxiliarAluno receberá
-				 * o valor após ela, excluindo assim o valor do meio que anteriormente havia sido armazenado nela.
+				/*
+				 * Caso ambos valores sejam iguais, aluno receberá o nome do próximo aluno
+				 * (aluno do meio) e a variável auxiliarAluno receberá o valor após ela,
+				 * excluindo assim o valor do meio que anteriormente havia sido armazenado nela.
 				 */
-				
+
 				if (inicia == meio - 1) {
 					aluno = auxiliar.getNome();
 					auxiliarAluno.setProximo(auxiliar.getProximo());
@@ -201,7 +253,7 @@ public class ListaAlunos {
 		return aluno;
 	}
 
-	//Método que verifica se a lista está vazia
+	// Método que verifica se a lista está vazia
 	public boolean listaVazia() {
 		return (inicio == null);
 	}
