@@ -12,6 +12,15 @@ public class Principal {
 		int ra;
 		String nome, turma, semestre;
 		String aluno = "";
+		
+		/*
+		 * *********************************************************Teste de Mesa********************************************************
+		 * 1 - Opção 1 - Adicionar no início RA: 3000 Aluno: Pedro Turma: Noite Semestre: Segundo  : Saída ["O aluno Pedro foi adicionado no início da lista"]
+		 * 2 - Opção 2 - Adicionar no Final RA: 4000 Aluno: Ana Turma: Manhã Semestre: Primeiro  : Saída ["O aluno Ana foi adicionado no final da lista"]
+		 * 3 - Opção 6 - Adicionar no meio da lista RA: 6000 Aluno: Paulo Turma: Tarde Semestre: Quinto  : Saída ["O aluno Paulo foi adicionado à lista"]
+		 * 4 - Opção 5 - Remove meio da lista : Saída ["O aluno Paulo foi removido da lista"]
+		 * 5 - Opção 7 - Verificar se lista está vazia  : Saída ["A lista não está vazia"]
+		 */
 
 		while (opcao != 9) {
 

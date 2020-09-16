@@ -12,6 +12,17 @@ public class Principal {
 		double temperatura = 0;
 		int posicao = 0;
 		double elemento = 0;
+		
+		/*
+		 * ********************************************Teste de Mesa**************************************************************
+		 * 1 - Opção 1 - Adicionar no início temperatura 32  : Saída ["A temperatura 32° foi adicionada no início da lista"]
+		 * 2 - Opção 2 - Adicionar no Final temperatura -10  : Saída ["A temperatura -10° foi adicionada no final da lista"]
+		 * 3 - Opção 5 - Adicionar em posição específica temperatura 15 posição 1  : Saída ["A temperatura 15° foi adicionada no início da lista"]
+		 * 4 - Opção 4 - Remove Final da lista : Saída ["A temperatura -10° foi removida do final da lista"]
+		 * 5 - Opção 7 - Verificar se lista está vazia  : Saída ["A lista não está vazia"]
+		 */
+		
+		
 
 		while (opcao != 9) {
 
