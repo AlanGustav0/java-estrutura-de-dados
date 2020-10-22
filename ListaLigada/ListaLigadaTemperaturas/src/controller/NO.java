@@ -1,4 +1,4 @@
-package Ex02_Atividade_EstruturaDeDados;
+package controller;
 
 public class NO {
 	

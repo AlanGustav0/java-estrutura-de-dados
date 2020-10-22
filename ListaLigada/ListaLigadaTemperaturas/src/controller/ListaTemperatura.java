@@ -1,4 +1,5 @@
-package Ex02_Atividade_EstruturaDeDados;
+package controller;
+
 
 import javax.swing.JOptionPane;
 
